@@ -7,31 +7,41 @@
     <title>Oriental Qi Massage</title>
     <meta
       name="description"
-      content="Experience ultimate relaxation at Oriental Qi Massage in Hollywood, FL. We offer Reflexology, Swedish, Deep Tissue, and Combo massages. Open 7 days a week."
+      content="Experience ultimate relaxation at Oriental Qi Massage in Hollywood, FL. We offer Reflexology, Swedish, Deep Tissue, and Combo massages. Located in Publix."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Matemasie&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
       rel="stylesheet"
     />
     <style>
-      /* Oriental Qi Stylesheet */
+      /* Oriental Qi Stylesheet - Updated Design */
 
       /* Base Styles */
+      :root {
+        --primary-color: #8E2436; /* Branding Red */
+        --secondary-color: #fce4ec; /* Light Pink Background */
+        --accent-color: #d4af37; /* Gold for prices/deals */
+        --text-color: #333;
+        --white: #ffffff;
+      }
+
       body {
         font-family: 'Josefin Sans', sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #f9f9f9;
-        color: #333;
+        background-color: #fdfbf7;
+        color: var(--text-color);
         line-height: 1.6;
-        padding-top: 70px; /* Space for fixed nav */
+        padding-top: 70px;
       }
 
       h1, h2, h3, h4, h5, h6 {
-        font-weight: 600;
+        font-family: 'Playfair Display', serif; /* More elegant font for headings */
+        font-weight: 700;
         margin-bottom: 1rem;
+        color: var(--primary-color);
       }
 
       section {
@@ -40,15 +50,16 @@
       }
 
       section h2 {
-        font-size: 2.5rem;
-        margin-bottom: 1.5rem;
-        color: #333;
+        font-size: 2.8rem;
+        margin-bottom: 0.5rem;
       }
 
       section h4 {
         font-size: 1.2rem;
         color: #666;
-        margin-bottom: 2rem;
+        font-family: 'Josefin Sans', sans-serif;
+        margin-bottom: 3rem;
+        font-weight: 300;
       }
 
       /* Navigation */
@@ -57,12 +68,12 @@
         justify-content: center;
         align-items: center;
         padding: 1rem;
-        background-color: #8E2436; /* Dark red/maroon inspired by "Qi" branding */
+        background-color: var(--primary-color);
         position: fixed;
         top: 0;
         width: 100%;
         z-index: 1000;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       }
 
       nav ul {
@@ -73,31 +84,30 @@
       }
 
       nav ul li {
-        margin-left: 20px;
-        margin-right: 20px;
+        margin: 0 15px;
       }
 
       nav ul li a {
-        color: white;
+        color: var(--white);
         text-decoration: none;
         font-size: 1.1rem;
         transition: color 0.3s ease;
         text-transform: uppercase;
-        letter-spacing: 1px;
+        letter-spacing: 1.5px;
+        font-weight: 600;
       }
 
       nav ul li a:hover {
-        color: #FFD700;
+        color: var(--accent-color);
       }
 
       /* Home Section */
       .home {
-        /* Background image 2.avif as requested, with fallback gradient */
-        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('2.avif');
-        background-color: #333; /* Fallback color */
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('2.avif');
+        background-color: #333;
         background-size: cover;
         background-position: center;
-        height: 90vh; /* Slightly reduced height */
+        height: 85vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -108,46 +118,184 @@
       }
 
       .home-content {
-        background-color: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(8px);
-        padding: 40px;
-        border-radius: 10px;
-        max-width: 800px;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-        animation: fadeIn 1s ease-out;
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(5px);
+        padding: 40px 60px;
+        border-radius: 4px;
+        border: 1px solid rgba(255,255,255,0.3);
+        max-width: 900px;
+        animation: fadeIn 1.2s ease-out;
       }
 
       .home h1 {
-        font-size: 3.5rem;
-        margin-bottom: 10px;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        font-size: 4rem;
+        margin-bottom: 15px;
         color: #fff;
-        font-family: 'Josefin Sans', sans-serif; /* Changed to regular font */
-        font-weight: 700;
-        letter-spacing: 2px;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        font-family: 'Playfair Display', serif;
+        letter-spacing: 1px;
       }
 
       .spa-tagline {
-        font-size: 1.4rem;
-        margin-bottom: 20px;
+        font-size: 1.5rem;
+        margin-bottom: 30px;
         font-weight: 300;
+        letter-spacing: 1px;
       }
 
-      /* Carousel / Gallery Section */
-      #gallery {
+      /* Contact Buttons in Home */
+      .contact-buttons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+
+      .cta-btn {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 15px 35px;
+        border: 2px solid var(--primary-color);
+        border-radius: 50px;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .cta-btn:hover {
+        background-color: transparent;
+        color: white;
+        border-color: white;
+      }
+
+      .cta-btn.secondary {
+        background-color: transparent;
+        border-color: white;
+      }
+
+      .cta-btn.secondary:hover {
+        background-color: white;
+        color: var(--primary-color);
+      }
+
+      /* Services Section */
+      #services {
+        background-color: #fff;
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .service-box {
         background: #fff;
-        padding: 60px 20px;
-        position: relative;
+        border: 1px solid #eee;
+        border-radius: 8px;
+        padding: 0; /* Removing padding for header image effect if needed, but keeping simple for now */
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        overflow: hidden;
+      }
+
+      .service-box:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+      }
+
+      .service-header {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 20px;
+      }
+
+      .service-header h3 {
+        margin: 0;
+        color: white;
+        font-size: 1.5rem;
+      }
+
+      .service-body {
+        padding: 25px;
+      }
+
+      .price-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .price-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+        border-bottom: 1px dashed #eee;
+        padding-bottom: 12px;
+      }
+
+      .price-item:last-child {
+        border-bottom: none;
+      }
+
+      .service-name {
+        text-align: left;
+        font-weight: 600;
+        font-size: 1.05rem;
+        color: #444;
+      }
+
+      .price-display {
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      .original-price {
+        text-decoration: line-through;
+        color: #999;
+        font-size: 0.9rem;
+        margin-bottom: 2px;
+      }
+
+      .current-price {
+        color: var(--primary-color);
+        font-weight: 700;
+        font-size: 1.2rem;
+      }
+
+      .aromatherapy-tag {
+        font-size: 0.75rem;
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+        padding: 2px 6px;
+        border-radius: 4px;
+        margin-left: 5px;
+        display: inline-block;
+        font-weight: normal;
+        vertical-align: middle;
+      }
+
+      /* Gallery Section */
+      #gallery {
+        background-color: #f9f9f9;
       }
 
       .carousel-container {
-        max-width: 900px;
+        max-width: 1000px;
         margin: 0 auto;
         position: relative;
         overflow: hidden;
-        border-radius: 15px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        border-radius: 8px;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.1);
         aspect-ratio: 16/9;
       }
 
@@ -155,7 +303,7 @@
         display: flex;
         width: 100%;
         height: 100%;
-        transition: transform 0.5s ease-in-out;
+        transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
       }
 
       .carousel-image {
@@ -168,155 +316,110 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        background: rgba(0, 0, 0, 0.5);
-        color: white;
+        background: rgba(255,255,255,0.8);
+        color: var(--primary-color);
         border: none;
-        padding: 15px;
-        cursor: pointer;
-        font-size: 24px;
-        border-radius: 50%;
-        transition: background 0.3s;
-        z-index: 10;
+        padding: 0;
         width: 50px;
         height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 24px;
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: all 0.3s;
+        z-index: 10;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       }
 
       .carousel-btn:hover {
-        background: rgba(142, 36, 54, 0.8);
+        background: var(--primary-color);
+        color: white;
       }
 
       .prev-btn { left: 20px; }
       .next-btn { right: 20px; }
 
-      .carousel-indicators {
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        gap: 10px;
-      }
-
-      .indicator {
-        width: 12px;
-        height: 12px;
-        background: rgba(255,255,255,0.5);
-        border-radius: 50%;
-        cursor: pointer;
-      }
-
-      .indicator.active {
+      /* Contact & Map Section */
+      #contact {
         background: white;
-        transform: scale(1.2);
+        padding-bottom: 0;
       }
 
-      /* Contact Buttons */
-      .contact-buttons {
+      .contact-layout {
         display: flex;
-        gap: 20px;
-        justify-content: center;
         flex-wrap: wrap;
-        margin-top: 30px;
-      }
-
-      .contact-card {
-        background: white;
-        color: #333;
-        padding: 25px;
-        border-radius: 10px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        min-width: 280px;
-        text-align: center;
-        border-top: 4px solid #8E2436;
-      }
-
-      .phone-number {
-        font-size: 1.8rem;
-        font-weight: bold;
-        color: #8E2436;
-        text-decoration: none;
-        display: block;
-        margin: 10px 0;
-      }
-
-      /* Services Section */
-      #services {
-        background-color: #f4f4f4;
-      }
-
-      .services-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 25px;
         max-width: 1200px;
         margin: 0 auto;
-      }
-
-      .service-box {
-        background: white;
-        padding: 30px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.08);
         border-radius: 12px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        transition: transform 0.3s ease;
+        overflow: hidden;
+      }
+
+      .contact-details {
+        flex: 1;
+        min-width: 300px;
+        padding: 50px;
+        background: #fff;
         text-align: left;
-        border-left: 5px solid #8E2436;
-      }
-
-      .service-box:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-      }
-
-      .service-box h3 {
-        color: #8E2436;
-        font-size: 1.4rem;
-        margin-top: 0;
-        border-bottom: 1px solid #eee;
-        padding-bottom: 10px;
-      }
-
-      .price-list {
-        list-style: none;
-        padding: 0;
-        margin: 15px 0 0 0;
-      }
-
-      .price-item {
         display: flex;
-        justify-content: space-between;
-        margin-bottom: 8px;
-        font-size: 1.05rem;
-        border-bottom: 1px dotted #ddd;
-        padding-bottom: 4px;
+        flex-direction: column;
+        justify-content: center;
       }
 
-      .price-item.bold {
-        font-weight: 600;
-        color: #555;
+      .contact-map-container {
+        flex: 1;
+        min-width: 300px;
+        position: relative;
+        min-height: 450px;
       }
-
-      .note {
-        font-size: 0.85rem;
-        color: #666;
-        font-style: italic;
-        margin-top: 5px;
-        display: block;
-      }
-
-      .free-tag {
-        background-color: #d4edda;
-        color: #155724;
-        padding: 2px 6px;
-        border-radius: 4px;
-        font-size: 0.8rem;
+      
+      .publix-badge {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: #008a00; /* Publix green approx */
+        color: white;
+        padding: 8px 15px;
+        border-radius: 20px;
         font-weight: bold;
-        margin-left: 5px;
+        z-index: 10;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        font-size: 0.9rem;
       }
 
-      /* Booking Form */
+      .contact-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+        font-size: 1.1rem;
+      }
+
+      .contact-icon {
+        width: 40px;
+        height: 40px;
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        font-size: 1.2rem;
+      }
+      
+      .contact-link {
+        color: var(--text-color);
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      
+      .contact-link:hover {
+        color: var(--primary-color);
+      }
+
+      /* Booking Form Modal */
       .booking-wrapper {
         display: none;
         position: fixed;
@@ -324,7 +427,8 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0,0,0,0.8);
+        background: rgba(0,0,0,0.7);
+        backdrop-filter: blur(5px);
         z-index: 2000;
         align-items: center;
         justify-content: center;
@@ -336,134 +440,64 @@
 
       .booking-form {
         background: white;
-        padding: 30px;
-        border-radius: 15px;
+        padding: 40px;
+        border-radius: 8px;
         width: 90%;
-        max-width: 600px;
-        max-height: 90vh;
-        overflow-y: auto;
+        max-width: 500px;
         position: relative;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.2);
       }
+
+      .form-group { margin-bottom: 20px; text-align: left; }
+      .form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: #555; }
+      .form-group input, .form-group select, .form-group textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      .submit-btn {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 15px;
+        border: none;
+        border-radius: 4px;
+        width: 100%;
+        font-size: 1.1rem;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background 0.3s;
+      }
+
+      .submit-btn:hover { background-color: #6d1b29; }
 
       .close-form {
         position: absolute;
         top: 15px;
         right: 20px;
-        font-size: 28px;
+        font-size: 30px;
         background: none;
         border: none;
         cursor: pointer;
-        color: #333;
+        color: #999;
       }
-
-      .form-group {
-        margin-bottom: 15px;
-        text-align: left;
-      }
-
-      .form-group label {
-        display: block;
-        margin-bottom: 5px;
-        font-weight: 600;
-      }
-
-      .form-group input, .form-group select, .form-group textarea {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        box-sizing: border-box; /* Important for padding */
-      }
-
-      .submit-btn {
-        background-color: #8E2436;
-        color: white;
-        padding: 12px 25px;
-        border: none;
-        border-radius: 5px;
-        font-size: 1.1rem;
-        cursor: pointer;
-        width: 100%;
-        transition: background 0.3s;
-      }
-
-      .submit-btn:hover {
-        background-color: #6d1b29;
-      }
-
-      .book-button {
-        background-color: #8E2436;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 1rem;
-      }
-
-      /* Map Section */
-      #contact {
-        background: white;
-      }
-
-      .contact-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 40px;
-        max-width: 1100px;
-        margin: 0 auto;
-        text-align: left;
-      }
-
-      .contact-info {
-        flex: 1;
-        min-width: 300px;
-        padding: 20px;
-        background: #f9f9f9;
-        border-radius: 10px;
-      }
-
-      .contact-info p {
-        font-size: 1.1rem;
-        margin: 15px 0;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-
-      .map-responsive {
-        flex: 1;
-        min-width: 300px;
-        height: 400px;
-        background: #eee;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #777;
-        border: 1px solid #ddd;
-        overflow: hidden; /* Ensure iframe corners respect border radius */
-      }
-
+      
       footer {
         background-color: #222;
-        color: #aaa;
+        color: #888;
+        padding: 40px 20px;
         text-align: center;
-        padding: 20px;
-        margin-top: 40px;
-      }
-
-      @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
+        font-size: 0.9rem;
       }
 
       @media (max-width: 768px) {
-        .home h1 { font-size: 2.5rem; }
-        nav { flex-direction: column; }
-        nav ul { margin-top: 10px; }
-        .carousel-container { aspect-ratio: 4/3; }
+        .home h1 { font-size: 2.8rem; }
+        nav { flex-direction: column; padding: 10px; }
+        nav ul { margin-top: 10px; flex-wrap: wrap; justify-content: center; }
+        .contact-layout { flex-direction: column; }
+        .contact-map-container { min-height: 300px; }
       }
     </style>
   </head>
@@ -483,146 +517,253 @@
     <section id="home" class="home">
       <div class="home-content">
         <h1>Oriental Qi Massage</h1>
-        <p class="spa-tagline">Open 7 Days • 10am - 10pm • Walk-ins Welcome</p>
+        <p class="spa-tagline">Experience the Art of Healing</p>
+        <p style="font-size: 1.1rem; margin-bottom: 30px;">Open 7 Days • 10:00 AM - 10:00 PM</p>
         
         <div class="contact-buttons">
-          <div class="contact-card">
-            <h3>Call for Appointment</h3>
-            <a href="tel:954-987-3389" class="phone-number">954-987-3389</a>
-            <p>6911 Taft St. Hollywood, FL 33024<br>(In Publix Plaza)</p>
-          </div>
-          
-          <div class="contact-card" style="display:flex; flex-direction:column; justify-content:center;">
-            <h3>Book Online</h3>
-            <button class="book-button" onclick="showBookingForm()">Request Appointment</button>
-            <p style="margin-top:10px;">Fast confirmation within 30 mins</p>
-          </div>
+          <a href="tel:954-987-3389" class="cta-btn">Call 954-987-3389</a>
+          <button class="cta-btn secondary" onclick="showBookingForm()">Book Online</button>
         </div>
       </div>
     </section>
 
-    <!-- Services Section (Updated with Image Data) -->
+    <!-- Services Section -->
     <section id="services">
-      <h2>Our Price List</h2>
-      <h4>Reflexology, Body Work & Combo Packages</h4>
+      <h2>Exclusive Price List</h2>
+      <h4>Relax. Rejuvenate. Restore.</h4>
       
       <div class="services-grid">
-        <!-- Foot Massage -->
+        <!-- Reflexology Foot Massage -->
         <div class="service-box">
-          <h3>Reflexology Foot Massage</h3>
-          <ul class="price-list">
-            <li class="price-item"><span>30 minutes</span> <span>$28</span></li>
-            <li class="price-item"><span>60 minutes</span> <span>$43</span></li>
-            <li class="price-item"><span>90 minutes</span> <span>$68</span></li>
-          </ul>
+          <div class="service-header">
+            <h3>Reflexology Foot Massage</h3>
+          </div>
+          <div class="service-body">
+            <ul class="price-list">
+              <li class="price-item">
+                <span class="service-name">30 Minutes</span>
+                <div class="price-display">
+                  <span class="original-price">$35</span>
+                  <span class="current-price">$28</span>
+                </div>
+              </li>
+              <li class="price-item">
+                <span class="service-name">1 Hour (60 Mins)</span>
+                <div class="price-display">
+                  <span class="original-price">$50</span>
+                  <span class="current-price">$43</span>
+                </div>
+              </li>
+              <li class="price-item">
+                <span class="service-name">90 Minutes</span>
+                <div class="price-display">
+                  <span class="original-price">$75</span>
+                  <span class="current-price">$68</span>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <!-- Swedish Body -->
+        <!-- Swedish Body Massage -->
         <div class="service-box">
-          <h3>Swedish Body Massage</h3>
-          <span class="free-tag">Aromatherapy Included</span>
-          <ul class="price-list">
-            <li class="price-item"><span>30 minutes</span> <span>$38</span></li>
-            <li class="price-item"><span>60 minutes</span> <span>$60</span></li>
-            <li class="price-item"><span>90 minutes</span> <span>$90</span></li>
-          </ul>
+          <div class="service-header">
+            <h3>Swedish Body Massage</h3>
+          </div>
+          <div class="service-body">
+            <ul class="price-list">
+              <li class="price-item">
+                <span class="service-name">30 Minutes</span>
+                <div class="price-display">
+                  <span class="original-price">$45</span>
+                  <span class="current-price">$38</span>
+                </div>
+              </li>
+              <li class="price-item">
+                <span class="service-name">1 Hour (60 Mins)</span>
+                <div class="price-display">
+                  <span class="original-price">$65</span>
+                  <span class="current-price">$60</span>
+                </div>
+              </li>
+              <li class="price-item">
+                <span class="service-name">90 Minutes <span class="aromatherapy-tag" title="Includes Aromatherapy">Aroma Included</span></span>
+                <div class="price-display">
+                  <span class="original-price">$100</span>
+                  <span class="current-price">$90</span>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <!-- Deep Tissue -->
+        <!-- Deep Tissue Body Massage -->
         <div class="service-box">
-          <h3>Deep Tissue Body Massage</h3>
-          <span class="free-tag">Aromatherapy Included</span>
-          <ul class="price-list">
-            <li class="price-item"><span>30 minutes</span> <span>$45</span></li>
-            <li class="price-item"><span>60 minutes</span> <span>$70</span></li>
-            <li class="price-item"><span>90 minutes</span> <span>$100</span></li>
-          </ul>
+          <div class="service-header">
+            <h3>Deep Tissue Body Massage</h3>
+          </div>
+          <div class="service-body">
+            <ul class="price-list">
+              <li class="price-item">
+                <span class="service-name">30 Minutes</span>
+                <div class="price-display">
+                  <span class="original-price">$53</span>
+                  <span class="current-price">$45</span>
+                </div>
+              </li>
+              <li class="price-item">
+                <span class="service-name">1 Hour (60 Mins)</span>
+                <div class="price-display">
+                  <span class="original-price">$80</span>
+                  <span class="current-price">$70</span>
+                </div>
+              </li>
+              <li class="price-item">
+                <span class="service-name">90 Minutes <span class="aromatherapy-tag" title="Includes Aromatherapy">Aroma Included</span></span>
+                <div class="price-display">
+                  <span class="original-price">$110</span>
+                  <span class="current-price">$100</span>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <!-- Combo Body & Foot -->
+        <!-- Combo Massage -->
         <div class="service-box">
-          <h3>Combo Massage (Body & Foot)</h3>
-          <span class="free-tag">Aromatherapy & Hot Stone Included</span>
-          <ul class="price-list">
-            <li class="price-item"><span>30m Body + 30m Foot</span> <span>$55</span></li>
-            <li class="price-item"><span>30m Body + 60m Foot</span> <span>$78</span></li>
-            <li class="price-item"><span>60m Body + 30m Foot</span> <span>$88</span></li>
-            <li class="price-item"><span>60m Body + 60m Foot</span> <span>$98</span></li>
-          </ul>
+          <div class="service-header">
+            <h3>Combo Massage (Body & Foot)</h3>
+          </div>
+          <div class="service-body">
+            <ul class="price-list">
+              <li class="price-item">
+                <span class="service-name">30m Body + 30m Foot</span>
+                <div class="price-display">
+                  <span class="original-price">$65</span>
+                  <span class="current-price">$55</span>
+                </div>
+              </li>
+              <li class="price-item">
+                <span class="service-name">30m Foot + 60m Body</span>
+                <div class="price-display">
+                  <span class="original-price">$85</span>
+                  <span class="current-price">$78</span>
+                </div>
+              </li>
+              <li class="price-item">
+                <span class="service-name">60m Body + 30m Foot</span>
+                <div class="price-display">
+                  <span class="original-price">$100</span>
+                  <span class="current-price">$88</span>
+                </div>
+              </li>
+              <li class="price-item">
+                <span class="service-name">60m Body + 60m Foot</span>
+                <div class="price-display">
+                  <span class="original-price">$115</span>
+                  <span class="current-price">$98</span>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <!-- Combo Chair & Foot -->
+        <!-- Add-ons & Chair -->
         <div class="service-box">
-          <h3>Combo Massage (Chair & Foot)</h3>
-          <ul class="price-list">
-            <li class="price-item"><span>15m Chair + 30m Foot</span> <span>$48</span></li>
-            <li class="price-item"><span>15m Chair + 45m Foot</span> <span>$53</span></li>
-            <li class="price-item"><span>15m Chair + 60m Foot</span> <span>$58</span></li>
-          </ul>
-        </div>
-
-        <!-- Chair & Others - Updated -->
-        <div class="service-box">
-          <h3>Chair Massage</h3>
-          <ul class="price-list">
-            <li class="price-item"><span>15 minutes</span> <span>$22</span></li>
-            <li class="price-item"><span>20 minutes</span> <span>$28</span></li>
-            <li class="price-item"><span>30 minutes</span> <span>$38</span></li>
-          </ul>
-        </div>
-
-        <!-- Add-ons & Quick Fix -->
-        <div class="service-box">
-          <h3>Add-ons & More</h3>
-          <ul class="price-list">
-            <li class="price-item bold">Head Massage (10 min) <span>$10</span></li>
-            <li class="price-item">Hot Stone <span>Included</span></li>
-            <li class="price-item">Customized Aromatherapy <span>$6</span></li>
-          </ul>
+          <div class="service-header">
+            <h3>Chair Massage & Add-ons</h3>
+          </div>
+          <div class="service-body">
+            <ul class="price-list">
+              <li class="price-item">
+                <span class="service-name">Chair Massage (15 min)</span>
+                <div class="price-display">
+                  <span class="current-price">$22</span>
+                </div>
+              </li>
+              <li class="price-item">
+                <span class="service-name">Chair Massage (20 min)</span>
+                <div class="price-display">
+                  <span class="current-price">$28</span>
+                </div>
+              </li>
+              <li class="price-item">
+                <span class="service-name">Chair Massage (30 min)</span>
+                <div class="price-display">
+                  <span class="current-price">$38</span>
+                </div>
+              </li>
+              <li class="price-item">
+                <span class="service-name">Head Massage (10 min)</span>
+                <div class="price-display">
+                  <span class="current-price">$10</span>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Gallery Section (Carousel) -->
+    <!-- Gallery Section -->
     <section id="gallery">
       <h2>Gallery</h2>
       <div class="carousel-container">
         <div class="carousel-slide" id="carouselSlide">
-          <img src="https://spaandmassage.co.uk/wp-content/uploads/2025/08/guided_foot_pressure_points_ut1pv.jpg" alt="Foot Reflexology Points" class="carousel-image">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1L-0O6Juxasb8QicSAXdnWLSQjLrVvGVr8HPij_dvsgW7cWCeMVBGB-12hqGhPUkx5oA&usqp=CAU" alt="Relaxing Environment" class="carousel-image">
-          <img src="https://images.squarespace-cdn.com/content/v1/5d5f2058a79cbf000111652a/1586842536251-IY8XEBZ4JINBCSKZKAHT/FaceMassage.jpg" alt="Face Massage" class="carousel-image">
+          <img src="https://spaandmassage.co.uk/wp-content/uploads/2025/08/guided_foot_pressure_points_ut1pv.jpg" alt="Foot Reflexology" class="carousel-image">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1L-0O6Juxasb8QicSAXdnWLSQjLrVvGVr8HPij_dvsgW7cWCeMVBGB-12hqGhPUkx5oA&usqp=CAU" alt="Spa Room" class="carousel-image">
+          <img src="https://images.squarespace-cdn.com/content/v1/5d5f2058a79cbf000111652a/1586842536251-IY8XEBZ4JINBCSKZKAHT/FaceMassage.jpg" alt="Massage" class="carousel-image">
         </div>
         
         <button class="carousel-btn prev-btn" onclick="moveSlide(-1)">&#10094;</button>
         <button class="carousel-btn next-btn" onclick="moveSlide(1)">&#10095;</button>
-
-        <div class="carousel-indicators" id="indicators">
-          <!-- Indicators injected by JS -->
-        </div>
       </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
-      <h2>Contact Us</h2>
-      <div class="contact-container">
-        <div class="contact-info">
-          <h3>Oriental Qi Massage</h3>
-          <p>📍 6911 Taft St. Hollywood, FL 33024 (In Publix Plaza)</p>
-          <p>📞 <a href="tel:954-987-3389" style="color:#8E2436; text-decoration:none;">954-987-3389</a></p>
-          <p>✉️ <a href="mailto:orientalqi69@gmail.com" style="color:#333;">orientalqi69@gmail.com</a></p>
-          <p>🕒 Open 7 Days: 10:00 AM - 10:00 PM</p>
-          <p>🌐 <a href="http://www.orientalqispa.com" target="_blank" style="color:#8E2436;">www.orientalqispa.com</a></p>
-          <p style="margin-top:20px; font-weight:bold; color:#8E2436;">Welcome Appointment / Walk-in</p>
+      <div class="contact-layout">
+        <div class="contact-details">
+          <h2>Visit Us</h2>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <strong>Address</strong><br>
+              6911 Taft St. Hollywood, FL 33024<br>
+              <span style="color: var(--primary-color); font-weight: bold;">(Located in Publix)</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <strong>Phone</strong><br>
+              <a href="tel:954-987-3389" class="contact-link">954-987-3389</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <strong>Email</strong><br>
+              <a href="mailto:orientalqi69@gmail.com" class="contact-link">orientalqi69@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🕒</div>
+            <div>
+              <strong>Business Hours</strong><br>
+              Monday - Sunday: 10:00 AM - 10:00 PM
+            </div>
+          </div>
         </div>
         
-        <div class="map-responsive">
+        <div class="contact-map-container">
+          <div class="publix-badge">🛒 Located in Publix</div>
           <iframe 
             width="100%" 
             height="100%" 
             frameborder="0" 
-            style="border:0" 
-            src="https://maps.google.com/maps?q=6911+Taft+St,+Hollywood,+FL+33024&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+            style="border:0;" 
+            src="https://maps.google.com/maps?q=6911+Taft+St,+Hollywood,+FL+33024+(Publix)&t=&z=16&ie=UTF8&iwloc=&output=embed" 
             allowfullscreen>
           </iframe>
         </div>
@@ -633,42 +774,37 @@
     <div id="bookingWrapper" class="booking-wrapper">
       <div class="booking-form">
         <button class="close-form" onclick="hideBookingForm()">&times;</button>
-        <h3>Schedule Your Visit</h3>
-        <p style="margin-bottom:20px; color:#666;">Oriental Qi Massage - Appointment Request</p>
+        <h3 style="color:var(--primary-color); margin-top:0;">Request Appointment</h3>
+        <p style="color:#666;">We will confirm by phone shortly.</p>
         
         <form onsubmit="submitBooking(event)">
           <div class="form-group">
-            <label for="name">Name *</label>
+            <label>Your Name</label>
             <input type="text" id="name" required>
           </div>
           <div class="form-group">
-            <label for="phone">Phone *</label>
+            <label>Phone Number</label>
             <input type="tel" id="phone" required>
           </div>
-          <div class="form-group">
-            <label for="date">Date & Time *</label>
-            <div style="display:flex; gap:10px;">
-                <input type="date" id="date" required>
-                <input type="time" id="time" min="10:00" max="22:00" required>
-            </div>
+          <div style="display:flex; gap:10px;">
+             <div class="form-group" style="flex:1;">
+               <label>Date</label>
+               <input type="date" id="date" required>
+             </div>
+             <div class="form-group" style="flex:1;">
+               <label>Time</label>
+               <input type="time" id="time" min="10:00" max="22:00" required>
+             </div>
           </div>
           <div class="form-group">
-            <label for="service">Service *</label>
-            <select id="service" required>
-                <option value="">Select a Service</option>
-                <option value="Reflexology Foot - 30m ($28)">Reflexology Foot - 30m ($28)</option>
-                <option value="Reflexology Foot - 60m ($43)">Reflexology Foot - 60m ($43)</option>
-                <option value="Swedish Body - 60m ($60)">Swedish Body - 60m ($60)</option>
-                <option value="Deep Tissue - 60m ($70)">Deep Tissue - 60m ($70)</option>
-                <option value="Combo Body+Foot - 60m ($88)">Combo Body+Foot - 60m ($88)</option>
-                <option value="Chair Massage - 15m ($22)">Chair Massage - 15m ($22)</option>
-                <option value="Head Massage - 10m ($10)">Head Massage - 10m ($10)</option>
-                <option value="Other">Other (Please specify in notes)</option>
+            <label>Service</label>
+            <select id="service">
+              <option value="Foot Reflexology">Reflexology Foot Massage</option>
+              <option value="Swedish Body">Swedish Body Massage</option>
+              <option value="Deep Tissue">Deep Tissue Body Massage</option>
+              <option value="Combo">Combo Massage</option>
+              <option value="Chair">Chair Massage</option>
             </select>
-          </div>
-          <div class="form-group">
-            <label for="notes">Notes</label>
-            <textarea id="notes" rows="3"></textarea>
           </div>
           <button type="submit" class="submit-btn">Send Request</button>
         </form>
@@ -677,6 +813,7 @@
 
     <footer>
       <p>&copy; 2025 Oriental Qi Massage. License MM40176. All rights reserved.</p>
+      <p>6911 Taft St. Hollywood, FL 33024</p>
     </footer>
 
     <script>
@@ -684,25 +821,10 @@
       let currentSlide = 0;
       const slideContainer = document.getElementById('carouselSlide');
       const images = document.querySelectorAll('.carousel-image');
-      const indicatorsContainer = document.getElementById('indicators');
       const totalSlides = images.length;
-
-      // Create indicators
-      images.forEach((_, index) => {
-        const dot = document.createElement('div');
-        dot.classList.add('indicator');
-        if (index === 0) dot.classList.add('active');
-        dot.addEventListener('click', () => goToSlide(index));
-        indicatorsContainer.appendChild(dot);
-      });
-
-      const indicators = document.querySelectorAll('.indicator');
 
       function updateCarousel() {
         slideContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
-        indicators.forEach((dot, index) => {
-          dot.classList.toggle('active', index === currentSlide);
-        });
       }
 
       function moveSlide(step) {
@@ -710,15 +832,7 @@
         updateCarousel();
       }
 
-      function goToSlide(index) {
-        currentSlide = index;
-        updateCarousel();
-      }
-
-      // Auto play
-      setInterval(() => {
-        moveSlide(1);
-      }, 5000);
+      setInterval(() => { moveSlide(1); }, 5000);
 
       /* --- Booking Modal Logic --- */
       function showBookingForm() {
@@ -731,20 +845,15 @@
 
       function submitBooking(e) {
         e.preventDefault();
-        // Here you would typically send data to a backend
         const name = document.getElementById('name').value;
         const date = document.getElementById('date').value;
         const time = document.getElementById('time').value;
-        
-        alert(`Thank you, ${name}! We have received your request for ${date} at ${time}. We will call you at the provided number to confirm shortly.`);
+        alert(`Thank you ${name}! Request for ${date} at ${time} sent. We'll call you soon.`);
         hideBookingForm();
       }
 
-      // Close modal if clicking outside form
       document.getElementById('bookingWrapper').addEventListener('click', function(e) {
-        if (e.target === this) {
-          hideBookingForm();
-        }
+        if (e.target === this) hideBookingForm();
       });
     </script>
   </body>
