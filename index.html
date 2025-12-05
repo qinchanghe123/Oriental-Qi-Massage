@@ -7,7 +7,7 @@
     <title>Oriental Qi Massage</title>
     <meta
       name="description"
-      content="Experience ultimate relaxation at Oriental Qi Massage in Hollywood, FL. We offer Reflexology, Swedish, Deep Tissue, and Combo massages. Located in Publix."
+      content="Experience ultimate relaxation at Oriental Qi Massage in Hollywood, FL. We offer Reflexology, Swedish, Deep Tissue, and Combo massages. Located in Publix Plaza."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -199,7 +199,7 @@
         background: #fff;
         border: 1px solid #eee;
         border-radius: 8px;
-        padding: 0; /* Removing padding for header image effect if needed, but keeping simple for now */
+        padding: 0;
         box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         overflow: hidden;
@@ -282,6 +282,42 @@
         display: inline-block;
         font-weight: normal;
         vertical-align: middle;
+      }
+      
+      .head-massage-highlight {
+        background-color: #fff9fa;
+        border: 2px solid var(--secondary-color);
+        border-radius: 8px;
+        padding: 10px;
+        margin-bottom: 15px;
+      }
+      
+      .head-massage-highlight .service-name {
+        color: var(--primary-color);
+        font-weight: 800;
+      }
+
+      /* Gift Certificate Banner */
+      .gift-banner {
+        background: linear-gradient(135deg, var(--primary-color), #6d1b29);
+        color: white;
+        padding: 40px 20px;
+        margin: 40px 0;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(142, 36, 54, 0.3);
+      }
+      
+      .gift-banner h3 {
+        color: var(--accent-color);
+        font-size: 2rem;
+        margin-top: 0;
+      }
+      
+      .gift-note {
+        font-size: 0.9rem;
+        opacity: 0.8;
+        margin-top: 15px;
+        font-style: italic;
       }
 
       /* Gallery Section */
@@ -548,7 +584,7 @@
                 </div>
               </li>
               <li class="price-item">
-                <span class="service-name">1 Hour (60 Mins)</span>
+                <span class="service-name">60 Mins</span>
                 <div class="price-display">
                   <span class="original-price">$50</span>
                   <span class="current-price">$43</span>
@@ -580,7 +616,7 @@
                 </div>
               </li>
               <li class="price-item">
-                <span class="service-name">1 Hour (60 Mins)</span>
+                <span class="service-name">60 Mins</span>
                 <div class="price-display">
                   <span class="original-price">$65</span>
                   <span class="current-price">$60</span>
@@ -612,7 +648,7 @@
                 </div>
               </li>
               <li class="price-item">
-                <span class="service-name">1 Hour (60 Mins)</span>
+                <span class="service-name">60 Mins</span>
                 <div class="price-display">
                   <span class="original-price">$80</span>
                   <span class="current-price">$70</span>
@@ -651,9 +687,9 @@
                 </div>
               </li>
               <li class="price-item">
-                <span class="service-name">60m Body + 30m Foot</span>
+                <span class="service-name">60m Body + 30m Foot <span class="aromatherapy-tag" title="Includes Aromatherapy">Aroma Included</span></span>
                 <div class="price-display">
-                  <span class="original-price">$100</span>
+                  <span class="original-price">$95</span>
                   <span class="current-price">$88</span>
                 </div>
               </li>
@@ -668,10 +704,56 @@
           </div>
         </div>
 
-        <!-- Add-ons & Chair -->
+        <!-- Combo Chair & Foot -->
         <div class="service-box">
           <div class="service-header">
-            <h3>Chair Massage & Add-ons</h3>
+            <h3>Combo Massage (Chair & Foot)</h3>
+          </div>
+          <div class="service-body">
+            <ul class="price-list">
+              <li class="price-item">
+                <span class="service-name">15m Chair + 30m Foot</span>
+                <div class="price-display">
+                  <span class="current-price">$48</span>
+                </div>
+              </li>
+              <li class="price-item">
+                <span class="service-name">15m Chair + 45m Foot</span>
+                <div class="price-display">
+                  <span class="current-price">$53</span>
+                </div>
+              </li>
+              <li class="price-item">
+                <span class="service-name">15m Chair + 60m Foot</span>
+                <div class="price-display">
+                  <span class="current-price">$58</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Head Massage (Separate) -->
+        <div class="service-box">
+          <div class="service-header">
+            <h3>Head Massage</h3>
+          </div>
+          <div class="service-body">
+            <ul class="price-list">
+              <li class="price-item" style="border-bottom:none;">
+                <span class="service-name">Head Massage (10 min)</span>
+                <div class="price-display">
+                  <span class="current-price">$10</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Chair Massage (Separate) -->
+        <div class="service-box">
+          <div class="service-header">
+            <h3>Chair Massage</h3>
           </div>
           <div class="service-body">
             <ul class="price-list">
@@ -693,14 +775,19 @@
                   <span class="current-price">$38</span>
                 </div>
               </li>
-              <li class="price-item">
-                <span class="service-name">Head Massage (10 min)</span>
-                <div class="price-display">
-                  <span class="current-price">$10</span>
-                </div>
-              </li>
             </ul>
           </div>
+        </div>
+      </div>
+
+      <!-- Gift Certificates Section -->
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 10px;">
+        <div class="gift-banner">
+          <h3>Gift Certificates Available</h3>
+          <p style="font-size: 1.4rem; font-weight: bold; margin: 15px 0;">
+            🎁 Buy 10 Get 1 Hour Foot Reflexology FREE
+          </p>
+          <p class="gift-note">* Gift certificates cannot be used on the day of purchase.</p>
         </div>
       </div>
     </section>
@@ -730,7 +817,7 @@
             <div>
               <strong>Address</strong><br>
               6911 Taft St. Hollywood, FL 33024<br>
-              <span style="color: var(--primary-color); font-weight: bold;">(Located in Publix)</span>
+              <span style="color: var(--primary-color); font-weight: bold;">(Located in Publix Plaza)</span>
             </div>
           </div>
           <div class="contact-item">
@@ -757,7 +844,7 @@
         </div>
         
         <div class="contact-map-container">
-          <div class="publix-badge">🛒 Located in Publix</div>
+          <div class="publix-badge">🛒 Located in Publix Plaza</div>
           <iframe 
             width="100%" 
             height="100%" 
@@ -812,7 +899,7 @@
     </div>
 
     <footer>
-      <p>&copy; 2025 Oriental Qi Massage. License MM40176. All rights reserved.</p>
+      <p>&copy; 2025 Oriental Qi Massage. License MM46758. All rights reserved.</p>
       <p>6911 Taft St. Hollywood, FL 33024</p>
     </footer>
 
